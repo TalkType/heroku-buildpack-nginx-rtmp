@@ -29,7 +29,7 @@ echo "Starting build..."
 
 (
 	cd ${NGINX_VERSION}
-	./configure \
+	CFLAGS=-Wno-error ./configure \
 	    --with-http_ssl_module \
 	    --with-threads \
 	    --with-ipv6 \
